@@ -8,21 +8,25 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     return "This is Home Page"
-
+# develop api
 @app.route("/hello")
 def hello():
     return "This is hello, world page"
-# static
 
+# static
+#develop api
 @app.route("/Ajay")
 def welcome():
     return "Welcome Ajay, what is your order"
 
+# static
+#develop api
 @app.route("/C B Shukla")
 def greet():
     return "Welcome C B Shulka ji, what is your plan for today"
 
 # dynamic
+# develop api
 @app.route('/<name>')
 def namaskara(name):
     return f'welcome {name}. What would you like to order.'
@@ -46,4 +50,4 @@ def create(first_name=None, last_name=None):
     return 'Hello ' + first_name + last_name
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8081, debug=True)
+    app.run(host="127.0.0.1", port=8083, debug=False)
